@@ -3,10 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cripta Dark Press</title>
+
+  <title>Cripta Dark Press — Sito in preparazione</title>
+
+  <meta
+    name="description"
+    content="Cripta Dark Press è un progetto autoriale e un sigillo di curatela indipendente. Il sito ufficiale è attualmente in preparazione."
+  >
+
+  <!-- Da rimuovere quando verrà pubblicato il sito definitivo -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta name="theme-color" content="#000000">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/logo-cripta-dark-press.png"
+  >
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --black: #000000;
+      --white: #ffffff;
+      --soft-white: #d8d8d8;
+      --muted: #949494;
+      --line: rgba(255, 255, 255, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--black);
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .coming-soon {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px 28px;
+      text-align: center;
+      background: var(--black);
+    }
+
+    .logo {
+      display: block;
+      width: min(74vw, 520px);
+      height: auto;
+      margin: 0 auto 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--soft-white);
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 6vw, 3.5rem);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .separator {
+      width: 72px;
+      height: 1px;
+      margin: 24px auto;
+      background: var(--line);
+    }
+
+    .message {
+      max-width: 610px;
+      margin: 0;
+      color: var(--soft-white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.12rem);
+      line-height: 1.75;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 10px 18px;
+      border: 1px solid var(--line);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      margin-top: 42px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 520px) {
+      .coming-soon {
+        padding-inline: 18px;
+      }
+
+      .logo {
+        width: min(92vw, 420px);
+        margin-bottom: 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Cripta Dark Press</h1>
-  <p>Sito in preparazione.</p>
+  <main class="coming-soon">
+    <img
+      class="logo"
+      src="images/logo-cripta-dark-press.png"
+      alt="Logo di Cripta Dark Press"
+      width="1024"
+      height="1024"
+    >
+
+    <p class="eyebrow">Progetto autoriale e sigillo di curatela</p>
+
+    <h1>Il sito è in preparazione</h1>
+
+    <div class="separator" aria-hidden="true"></div>
+
+    <p class="message">
+      Stiamo costruendo lo spazio ufficiale di Cripta Dark Press,
+      dedicato a opere curate, indipendenti e riconoscibili.
+    </p>
+
+    <p class="status">Prossimamente online</p>
+
+    <footer>
+      &copy; 2026 Cripta Dark Press
+    </footer>
+  </main>
 </body>
 </html>
