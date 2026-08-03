@@ -97,7 +97,7 @@
     }
 
     .message {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0;
       color: var(--soft-white);
       font-family: Arial, Helvetica, sans-serif;
@@ -105,13 +105,8 @@
       line-height: 1.75;
     }
 
-    .clarification {
-      max-width: 650px;
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(0.84rem, 2vw, 0.94rem);
-      line-height: 1.65;
+    .message + .message {
+      margin-top: 18px;
     }
 
     .status {
@@ -133,6 +128,25 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.76rem;
       letter-spacing: 0.08em;
+      line-height: 1.8;
+    }
+
+    .footer-link {
+      color: var(--soft-white);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-separator {
+      margin: 0 8px;
+      color: var(--line);
     }
 
     @media (max-width: 520px) {
@@ -165,21 +179,30 @@
     <div class="separator" aria-hidden="true"></div>
 
     <p class="message">
-      Cripta Dark Press segue la revisione del testo, l’impaginazione,
-      la realizzazione della copertina e la preparazione dei file
-      destinati all’autopubblicazione.
+      Se hai tra le mani un libro che porta il sigillo di curatela
+      Cripta Dark Press, significa che quel libro è stato realmente curato.
     </p>
 
-    <p class="clarification">
-      Il sigillo indica che l’opera è stata curata dal progetto.
-      Ogni autore conserva i propri diritti e gestisce autonomamente
-      la pubblicazione attraverso la piattaforma scelta.
+    <p class="message">
+      Il testo è stato corretto e sottoposto a editing per eliminare
+      gli errori e renderne la lettura più scorrevole. L’impaginazione,
+      la copertina e le grafiche sono state realizzate con la cura
+      e la concezione visiva che caratterizzano Cripta Dark Press,
+      nel segno delle atmosfere cupe che ci identificano.
     </p>
 
     <p class="status">Prossimamente online</p>
 
     <footer>
-      &copy; 2026 Cripta Dark Press
+      <div>
+        &copy; 2026 Cripta Dark Press
+      </div>
+
+      <div>
+        <a class="footer-link" href="note-legali.html">
+          Note legali
+        </a>
+      </div>
     </footer>
   </main>
 </body>
