@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Il sigillo Cripta Dark Press identifica libri sottoposti a un lavoro di curatela, revisione, editing e, quando previsto, progettazione grafica."
+    content="Cripta Dark Press è un progetto privato di curatela. Il sigillo identifica le opere selezionate e curate dal progetto."
   >
 
   <!-- Da rimuovere quando il sito dovrà essere indicizzato -->
@@ -44,7 +44,6 @@
 
     body {
       min-height: 100vh;
-      min-height: 100svh;
       margin: 0;
       background: var(--black);
       color: var(--white);
@@ -52,22 +51,18 @@
     }
 
     .home {
+      width: min(100%, 920px);
       min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px 28px;
+      margin: 0 auto;
+      padding: 30px 24px 32px;
       text-align: center;
-      background: var(--black);
     }
 
     .logo {
       display: block;
       width: min(74vw, 520px);
       height: auto;
-      margin: 0 auto 28px;
+      margin: 0 auto 6px;
     }
 
     .eyebrow {
@@ -83,30 +78,62 @@
     .separator {
       width: 72px;
       height: 1px;
-      margin: 24px auto;
+      margin: 20px auto 30px;
       background: var(--line);
     }
 
-    .message {
+    .content {
       max-width: 720px;
-      margin: 0;
-      color: var(--soft-white);
+      margin: 0 auto;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1rem, 2.5vw, 1.12rem);
-      line-height: 1.75;
     }
 
-    .message + .message {
-      margin-top: 18px;
+    .intro {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(1.03rem, 2.3vw, 1.16rem);
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .content-separator {
+      width: 42px;
+      height: 1px;
+      margin: 30px auto;
+      background: var(--line);
+    }
+
+    .details {
+      color: var(--soft-white);
+      font-size: clamp(1rem, 2.1vw, 1.08rem);
+      line-height: 1.78;
+      text-align: left;
+    }
+
+    .details p {
+      margin: 0;
+    }
+
+    .details p + p {
+      margin-top: 20px;
+    }
+
+    .opening {
+      color: var(--white);
     }
 
     footer {
-      margin-top: 42px;
+      margin-top: 46px;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.76rem;
       letter-spacing: 0.08em;
-      line-height: 1.8;
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-top: 3px;
     }
 
     .footer-link {
@@ -122,14 +149,39 @@
       text-underline-offset: 4px;
     }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     @media (max-width: 520px) {
       .home {
-        padding-inline: 18px;
+        padding: 18px 18px 28px;
       }
 
       .logo {
         width: min(92vw, 420px);
-        margin-bottom: 22px;
+        margin-bottom: 4px;
+      }
+
+      .separator {
+        margin-top: 17px;
+        margin-bottom: 26px;
+      }
+
+      .content-separator {
+        margin-block: 25px;
+      }
+
+      .details {
+        line-height: 1.72;
       }
     }
   </style>
@@ -137,6 +189,8 @@
 
 <body>
   <main class="home">
+    <h1 class="sr-only">Cripta Dark Press</h1>
+
     <img
       class="logo"
       src="images/logo-cripta-dark-press.png"
@@ -149,35 +203,48 @@
 
     <div class="separator" aria-hidden="true"></div>
 
-    <p class="message">
-      La presenza del sigillo indica che il libro che hai tra le mani
-      è stato curato da Cripta Dark Press.
-    </p>
+    <div class="content">
+      <p class="intro">
+        Cripta Dark Press è un progetto privato di curatela nato per
+        valorizzare le opere dei suoi fondatori e, occasionalmente,
+        mettere le proprie competenze a disposizione di pochi testi
+        selezionati, affini alla sua sensibilità e ritenuti adatti
+        a ricevere il suo intervento.
+      </p>
 
-    <p class="message">
-      Il testo è stato letto con attenzione e sottoposto a revisione
-      ed editing per correggere gli errori, migliorarne la scorrevolezza
-      e accompagnarlo verso la sua versione definitiva.
-    </p>
+      <div class="content-separator" aria-hidden="true"></div>
 
-    <p class="message">
-      Quando previsto, anche l’impaginazione, la copertina e le grafiche
-      fanno parte della curatela, seguendo la concezione visiva
-      e le atmosfere cupe che identificano Cripta Dark Press.
-    </p>
+      <div class="details">
+        <p class="opening">
+          Se avete tra le mani un libro con questo sigillo in quarta
+          di copertina, significa che ha ricevuto la curatela
+          di Cripta Dark Press.
+        </p>
 
-    <p class="message">
-      All’interno del volume è presente una pagina dedicata a Cripta Dark Press,
-      che conferma l’autenticità del sigillo. Nel colophon sono invece indicati,
-      con precisione, gli interventi svolti su quella specifica opera.
-    </p>
+        <p>
+          Il testo è stato letto con attenzione e sottoposto a revisione
+          ed editing per correggere gli errori, migliorarne la scorrevolezza
+          e accompagnarlo verso la sua versione definitiva.
+        </p>
+
+        <p>
+          Quando previsto, la curatela comprende anche l’impaginazione,
+          la copertina e le grafiche, sviluppate secondo la concezione
+          visiva e le atmosfere cupe che identificano Cripta Dark Press.
+        </p>
+
+        <p>
+          All’interno del volume, una pagina dedicata conferma
+          l’autenticità del sigillo. Nel colophon sono indicati
+          con precisione gli interventi svolti su quella specifica opera.
+        </p>
+      </div>
+    </div>
 
     <footer>
-      <div>
-        &copy; 2026 Cripta Dark Press
-      </div>
+      <div>&copy; 2026 Cripta Dark Press</div>
 
-      <div>
+      <div class="footer-links">
         <a class="footer-link" href="note-legali.html">
           Note legali
         </a>
