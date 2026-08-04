@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy e cookie — Cripta Dark Press</title>
+
+  <meta
+    name="description"
+    content="Informativa sulla privacy, sui dati tecnici di navigazione e sull'uso dei cookie nel sito Cripta Dark Press."
+  >
+
+  <!-- Da rimuovere quando il sito dovrà essere indicizzato -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta name="theme-color" content="#000000">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/logo-cripta-dark-press.png"
+  >
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      --black: #000000;
+      --white: #ffffff;
+      --soft-white: #d8d8d8;
+      --muted: #949494;
+      --line: rgba(255, 255, 255, 0.18);
+      --line-strong: rgba(255, 255, 255, 0.28);
+      --panel: #080808;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--black);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: var(--black);
+      color: var(--soft-white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .privacy-page {
+      width: min(100% - 44px, 900px);
+      margin: 0 auto;
+      padding: 64px 0 80px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible {
+      color: var(--white);
+    }
+
+    .page-title {
+      margin: 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 7vw, 4.7rem);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 1.8;
+    }
+
+    .title-separator {
+      width: 76px;
+      height: 1px;
+      margin: 34px 0 20px;
+      background: var(--line-strong);
+    }
+
+    .privacy-content {
+      margin-top: 42px;
+    }
+
+    .privacy-section {
+      padding: 0 0 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .privacy-section:last-of-type {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .privacy-section h2 {
+      position: relative;
+      margin: 0 0 20px;
+      padding-left: 18px;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 4vw, 1.9rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    .privacy-section h2::before {
+      position: absolute;
+      top: 0.12em;
+      bottom: 0.12em;
+      left: 0;
+      width: 2px;
+      background: var(--line-strong);
+      content: "";
+    }
+
+    .privacy-section p {
+      margin: 0;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    .privacy-section p + p {
+      margin-top: 17px;
+    }
+
+    .privacy-section ul {
+      margin: 18px 0 0;
+      padding-left: 24px;
+    }
+
+    .privacy-section li {
+      padding-left: 4px;
+    }
+
+    .privacy-section li + li {
+      margin-top: 8px;
+    }
+
+    .external-link {
+      color: var(--white);
+      text-decoration: underline;
+      text-decoration-color: var(--line-strong);
+      text-underline-offset: 4px;
+    }
+
+    .external-link:hover,
+    .external-link:focus-visible {
+      text-decoration-color: var(--white);
+    }
+
+    .final-notice {
+      margin-top: 48px;
+      padding: 24px 26px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .site-footer {
+      padding: 54px 22px 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: block;
+      width: 92px;
+      height: auto;
+      margin: 0 auto 18px;
+    }
+
+    .footer-brand {
+      margin: 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .footer-description {
+      max-width: 560px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .footer-divider {
+      width: min(100%, 520px);
+      height: 1px;
+      margin: 28px auto 22px;
+      background: var(--line);
+    }
+
+    .footer-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .footer-link {
+      color: var(--soft-white);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-link[aria-current="page"] {
+      color: var(--muted);
+      cursor: default;
+      text-decoration: none;
+    }
+
+    .copyright {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 640px) {
+      .privacy-page {
+        width: min(100% - 30px, 900px);
+        padding: 42px 0 58px;
+      }
+
+      .back-link {
+        margin-bottom: 28px;
+      }
+
+      .page-intro {
+        line-height: 1.7;
+      }
+
+      .privacy-content {
+        margin-top: 34px;
+      }
+
+      .privacy-section {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+
+      .privacy-section p {
+        text-align: left;
+        hyphens: none;
+        -webkit-hyphens: none;
+      }
+
+      .final-notice {
+        margin-top: 38px;
+        padding: 20px;
+      }
+
+      .site-footer {
+        padding: 44px 18px 28px;
+      }
+
+      .footer-logo {
+        width: 82px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="privacy-page">
+    <a class="back-link" href="index.html">
+      ← Torna alla home
+    </a>
+
+    <h1 class="page-title">Privacy e cookie</h1>
+
+    <p class="page-intro">
+      Questa pagina descrive le modalità di funzionamento del sito
+      Cripta Dark Press in relazione ai dati tecnici di navigazione,
+      ai cookie e agli eventuali servizi forniti da soggetti esterni.
+    </p>
+
+    <div class="title-separator" aria-hidden="true"></div>
+
+    <div class="privacy-content">
+      <section class="privacy-section">
+        <h2>Natura del sito</h2>
+
+        <p>
+          Il sito Cripta Dark Press è una vetrina statica,
+          privata e amatoriale dedicata alla presentazione
+          del progetto, del suo sigillo di curatela e delle opere
+          che lo riportano.
+        </p>
+
+        <p>
+          Il sito non offre servizi commerciali, non consente
+          la creazione di account e non effettua direttamente
+          attività di vendita.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Dati raccolti direttamente</h2>
+
+        <p>
+          Cripta Dark Press non raccoglie direttamente dati personali
+          attraverso il sito.
+        </p>
+
+        <p>
+          Non sono presenti moduli di contatto, sistemi di registrazione,
+          aree riservate, newsletter, commenti o altri strumenti
+          attraverso i quali il visitatore possa trasmettere
+          volontariamente i propri dati.
+        </p>
+
+        <p>
+          Sul sito non viene pubblicato alcun indirizzo e-mail
+          destinato al contatto con i visitatori.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Dati tecnici di navigazione</h2>
+
+        <p>
+          Il sito è ospitato tramite GitHub Pages, servizio di hosting
+          per siti statici fornito da GitHub.
+        </p>
+
+        <p>
+          Durante la normale navigazione, l’infrastruttura tecnica
+          utilizzata per fornire il sito può acquisire automaticamente
+          alcuni dati necessari alla trasmissione e alla sicurezza
+          delle comunicazioni.
+        </p>
+
+        <p>
+          GitHub dichiara che, quando viene visitato un sito ospitato
+          tramite GitHub Pages, l’indirizzo IP del visitatore viene
+          registrato e conservato per finalità di sicurezza.
+        </p>
+
+        <p>
+          Il trattamento di tali dati viene effettuato da GitHub
+          secondo le proprie condizioni e la propria informativa
+          sulla privacy. Cripta Dark Press non riceve né consulta
+          i registri individuali contenenti gli indirizzi IP
+          dei visitatori.
+        </p>
+
+        <p>
+          Per maggiori informazioni è possibile consultare
+          la
+          <a
+            class="external-link"
+            href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            dichiarazione generale sulla privacy di GitHub
+          </a>.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Statistiche del repository</h2>
+
+        <p>
+          GitHub può rendere disponibili al proprietario del repository
+          alcune statistiche aggregate relative al traffico, come
+          il numero complessivo di visite, le pagine maggiormente
+          visualizzate e i siti di provenienza.
+        </p>
+
+        <p>
+          Tali informazioni, quando consultate, vengono utilizzate
+          esclusivamente per comprendere in modo generale il funzionamento
+          e la fruizione del sito e non vengono impiegate per identificare
+          o profilare i singoli visitatori.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Cookie e strumenti di tracciamento</h2>
+
+        <p>
+          Cripta Dark Press non installa direttamente cookie,
+          non utilizza cookie di profilazione e non impiega strumenti
+          destinati a seguire il comportamento del visitatore.
+        </p>
+
+        <p>
+          Il sito non utilizza Google Analytics, pixel pubblicitari,
+          sistemi di remarketing, pulsanti social attivi, video incorporati
+          o altri contenuti esterni progettati per raccogliere informazioni
+          sulla navigazione.
+        </p>
+
+        <p>
+          L’infrastruttura GitHub Pages può utilizzare strumenti tecnici
+          strettamente necessari alla fornitura, alla sicurezza
+          e al corretto funzionamento del servizio, secondo le modalità
+          descritte nelle informative di GitHub.
+        </p>
+
+        <p>
+          Poiché il sito non utilizza cookie di profilazione
+          o altri strumenti di tracciamento soggetti a consenso,
+          non viene mostrato alcun banner per l’accettazione dei cookie.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Servizi e contenuti esterni</h2>
+
+        <p>
+          Le pagine del sito non incorporano contenuti provenienti
+          da piattaforme video, social network, servizi pubblicitari,
+          mappe interattive o strumenti statistici esterni.
+        </p>
+
+        <p>
+          Le immagini, i fogli di stile e gli altri elementi necessari
+          alla visualizzazione delle pagine vengono caricati direttamente
+          dai file appartenenti al sito.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Collegamenti verso altri siti</h2>
+
+        <p>
+          Il sito può contenere collegamenti verso pagine gestite
+          da soggetti terzi.
+        </p>
+
+        <p>
+          L’apertura di un collegamento esterno comporta l’uscita
+          dal sito Cripta Dark Press. Da quel momento si applicano
+          le condizioni, le informative e le modalità di trattamento
+          dei dati previste dal sito visitato.
+        </p>
+
+        <p>
+          Cripta Dark Press non controlla e non risponde delle modalità
+          con cui i siti esterni trattano i dati dei propri visitatori.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Protezione dei minori</h2>
+
+        <p>
+          Il sito non è progettato per raccogliere dati personali
+          di minori e non offre funzioni che richiedano l’inserimento
+          di informazioni personali da parte degli utenti.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>Modifiche alla configurazione del sito</h2>
+
+        <p>
+          La presente informativa descrive la configurazione attuale
+          del sito.
+        </p>
+
+        <p>
+          Qualora venissero aggiunti moduli, strumenti statistici,
+          contenuti incorporati, newsletter, sistemi di contatto
+          o altre funzioni capaci di trattare dati personali,
+          questa pagina verrà aggiornata prima della loro attivazione.
+        </p>
+
+        <p>
+          Qualora venissero introdotti cookie o strumenti di tracciamento
+          che richiedono il consenso, sarà adottato anche un sistema
+          adeguato per consentire al visitatore di esprimere
+          e gestire le proprie scelte.
+        </p>
+      </section>
+    </div>
+
+    <div class="final-notice">
+      Cripta Dark Press adotta un’impostazione basata sulla raccolta
+      minima dei dati: nessun modulo, nessun account, nessuna newsletter,
+      nessuna profilazione e nessun tracciamento pubblicitario.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <img
+      class="footer-logo"
+      src="images/logo-cripta-dark-press.png"
+      alt=""
+      width="1024"
+      height="1024"
+    >
+
+    <p class="footer-brand">Cripta Dark Press</p>
+    <p class="footer-tagline">Sigillo di curatela</p>
+
+    <p class="footer-description">
+      Progetto privato e amatoriale dedicato alla curatela
+      di opere selezionate.
+    </p>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <nav
+      class="footer-navigation"
+      aria-label="Navigazione a piè di pagina"
+    >
+      <a class="footer-link" href="index.html">Home</a>
+
+      <a class="footer-link" href="note-legali.html">
+        Note legali
+      </a>
+
+      <span
+        class="footer-link"
+        aria-current="page"
+      >
+        Privacy e cookie
+      </span>
+    </nav>
+
+    <div class="copyright">
+      <div>&copy; 2026 Cripta Dark Press</div>
+      <div>Ultimo aggiornamento: 4 agosto 2026</div>
+    </div>
+  </footer>
+</body>
+</html>
