@@ -8,10 +8,10 @@
 
   <meta
     name="description"
-    content="Informazioni sulla natura e sul funzionamento del sigillo di curatela Cripta Dark Press."
+    content="Note legali sul funzionamento di Cripta Dark Press, sul significato del sigillo di curatela e sul ruolo degli autori."
   >
 
-  <!-- Da rimuovere quando verrà pubblicato il sito definitivo -->
+  <!-- Da rimuovere quando il sito dovrà essere indicizzato -->
   <meta name="robots" content="noindex, nofollow">
 
   <meta name="theme-color" content="#000000">
@@ -31,6 +31,7 @@
       --soft-white: #d8d8d8;
       --muted: #949494;
       --line: rgba(255, 255, 255, 0.18);
+      --line-strong: rgba(255, 255, 255, 0.28);
       --panel: #080808;
     }
 
@@ -41,6 +42,7 @@
     html {
       min-height: 100%;
       background: var(--black);
+      scroll-behavior: smooth;
     }
 
     body {
@@ -49,64 +51,30 @@
       background: var(--black);
       color: var(--soft-white);
       font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
       line-height: 1.75;
     }
 
     a {
-      color: var(--soft-white);
+      color: inherit;
     }
 
-    a:hover,
-    a:focus-visible {
-      color: var(--white);
-    }
-
-    .page-header {
-      padding: 30px 22px;
-      border-bottom: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .logo {
-      display: block;
-      width: 120px;
-      height: auto;
-      margin: 0 auto 16px;
-    }
-
-    .brand {
-      margin: 0;
-      color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.15rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .tagline {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .container {
-      width: min(100% - 36px, 860px);
+    .legal-page {
+      width: min(100% - 44px, 900px);
       margin: 0 auto;
-      padding: 58px 0 70px;
+      padding: 64px 0 80px;
     }
 
     .back-link {
       display: inline-block;
       margin-bottom: 34px;
       color: var(--muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-decoration: none;
       text-transform: uppercase;
+      transition: color 0.2s ease;
     }
 
     .back-link:hover,
@@ -114,333 +82,542 @@
       color: var(--white);
     }
 
-    h1,
-    h2 {
+    .page-title {
+      margin: 0;
       color: var(--white);
       font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 7vw, 4.7rem);
       font-weight: 500;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 7vw, 4rem);
-      letter-spacing: 0.05em;
-      line-height: 1.1;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
       text-transform: uppercase;
     }
 
-    .intro {
-      max-width: 720px;
-      margin: 22px 0 0;
+    .page-intro {
+      max-width: 760px;
+      margin: 24px 0 0;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 1.8;
     }
 
-    .separator {
-      width: 72px;
+    .title-separator {
+      width: 76px;
       height: 1px;
-      margin: 34px 0 44px;
-      background: var(--line);
+      margin: 34px 0 20px;
+      background: var(--line-strong);
     }
 
-    section {
-      padding: 30px 0;
+    .legal-content {
+      margin-top: 42px;
+    }
+
+    .legal-section {
+      padding: 0 0 36px;
+      margin-bottom: 36px;
       border-bottom: 1px solid var(--line);
     }
 
-    section:first-of-type {
-      padding-top: 0;
-    }
-
-    section:last-of-type {
+    .legal-section:last-of-type {
+      margin-bottom: 0;
       border-bottom: 0;
     }
 
-    h2 {
-      margin: 0 0 14px;
-      font-size: clamp(1.35rem, 4vw, 1.75rem);
-      letter-spacing: 0.03em;
+    .legal-section h2 {
+      position: relative;
+      margin: 0 0 20px;
+      padding-left: 18px;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 4vw, 1.9rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
     }
 
-    p {
+    .legal-section h2::before {
+      position: absolute;
+      top: 0.12em;
+      bottom: 0.12em;
+      left: 0;
+      width: 2px;
+      background: var(--line-strong);
+      content: "";
+    }
+
+    .legal-section p {
       margin: 0;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
     }
 
-    p + p {
-      margin-top: 16px;
+    .legal-section p + p {
+      margin-top: 17px;
     }
 
-    ul {
+    .legal-section ul {
       margin: 18px 0 0;
-      padding-left: 22px;
+      padding-left: 24px;
     }
 
-    li + li {
+    .legal-section li {
+      padding-left: 4px;
+    }
+
+    .legal-section li + li {
       margin-top: 8px;
     }
 
-    .notice {
-      margin-top: 34px;
-      padding: 22px;
-      border: 1px solid var(--line);
+    .final-notice {
+      margin-top: 48px;
+      padding: 24px 26px;
+      border: 1px solid var(--line-strong);
       background: var(--panel);
       color: var(--muted);
       font-size: 0.9rem;
+      line-height: 1.75;
     }
 
-    .page-footer {
-      padding: 28px 20px;
+    .site-footer {
+      padding: 54px 22px 34px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 0.76rem;
-      letter-spacing: 0.06em;
-      line-height: 1.8;
+      font-family: Arial, Helvetica, sans-serif;
       text-align: center;
     }
 
-    .page-footer a {
+    .footer-logo {
+      display: block;
+      width: 92px;
+      height: auto;
+      margin: 0 auto 18px;
+    }
+
+    .footer-brand {
+      margin: 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .footer-description {
+      max-width: 560px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .footer-divider {
+      width: min(100%, 520px);
+      height: 1px;
+      margin: 28px auto 22px;
+      background: var(--line);
+    }
+
+    .footer-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .footer-link {
+      color: var(--soft-white);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--white);
+      text-decoration: underline;
       text-underline-offset: 4px;
     }
 
-    @media (max-width: 520px) {
-      .container {
-        width: min(100% - 28px, 860px);
-        padding-top: 42px;
+    .copyright {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 640px) {
+      .legal-page {
+        width: min(100% - 30px, 900px);
+        padding: 42px 0 58px;
       }
 
-      .page-header {
-        padding-inline: 16px;
+      .back-link {
+        margin-bottom: 28px;
       }
 
-      .logo {
-        width: 100px;
+      .page-intro {
+        line-height: 1.7;
+      }
+
+      .legal-content {
+        margin-top: 34px;
+      }
+
+      .legal-section {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+
+      .legal-section p {
+        text-align: left;
+        hyphens: none;
+        -webkit-hyphens: none;
+      }
+
+      .final-notice {
+        margin-top: 38px;
+        padding: 20px;
+      }
+
+      .site-footer {
+        padding: 44px 18px 28px;
+      }
+
+      .footer-logo {
+        width: 82px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="page-header">
-    <a href="index.html" aria-label="Torna alla home di Cripta Dark Press">
-      <img
-        class="logo"
-        src="images/logo-cripta-dark-press.png"
-        alt="Logo di Cripta Dark Press"
-        width="1024"
-        height="1024"
-      >
-    </a>
-
-    <p class="brand">Cripta Dark Press</p>
-    <p class="tagline">Sigillo di curatela</p>
-  </header>
-
-  <main class="container">
+  <main class="legal-page">
     <a class="back-link" href="index.html">
       ← Torna alla home
     </a>
 
-    <h1>Note legali</h1>
+    <h1 class="page-title">Note legali</h1>
 
-    <p class="intro">
-      Questa pagina descrive la natura del progetto Cripta Dark Press,
-      il significato del suo sigillo e il ruolo svolto nella preparazione
+    <p class="page-intro">
+      Questa pagina descrive la natura di Cripta Dark Press,
+      il significato del suo sigillo e il ruolo svolto nella curatela
       delle opere che lo riportano.
     </p>
 
-    <div class="separator" aria-hidden="true"></div>
+    <div class="title-separator" aria-hidden="true"></div>
 
-    <section>
-      <h2>Natura del progetto</h2>
+    <div class="legal-content">
+      <section class="legal-section">
+        <h2>Natura del progetto</h2>
 
-      <p>
-        Cripta Dark Press è un sigillo di curatela.
-      </p>
+        <p>
+          Cripta Dark Press è un progetto privato e amatoriale
+          di curatela.
+        </p>
 
-      <p>
-        Non è una casa editrice, un’agenzia letteraria, una piattaforma
-        di autopubblicazione o un servizio commerciale aperto al pubblico.
-        Non pubblica direttamente le opere, non assegna codici ISBN
-        e non ne gestisce la distribuzione.
-      </p>
-    </section>
+        <p>
+          Non è una casa editrice, un’agenzia letteraria,
+          una piattaforma di autopubblicazione o un servizio
+          commerciale aperto al pubblico.
+        </p>
 
-    <section>
-      <h2>Significato del sigillo</h2>
+        <p>
+          Cripta Dark Press non pubblica direttamente le opere,
+          non assegna codici ISBN e non ne gestisce la vendita
+          o la distribuzione.
+        </p>
+      </section>
 
-      <p>
-        La presenza del sigillo Cripta Dark Press indica che quella
-        determinata opera o edizione è stata sottoposta alla nostra curatela.
-      </p>
+      <section class="legal-section">
+        <h2>Significato del sigillo</h2>
 
-      <p>
-        La lavorazione può comprendere:
-      </p>
+        <p>
+          La presenza del sigillo Cripta Dark Press indica che
+          una determinata opera o edizione è stata sottoposta
+          alla curatela del progetto.
+        </p>
 
-      <ul>
-        <li>lettura e valutazione del manoscritto;</li>
-        <li>editing e revisione del testo;</li>
-        <li>correzione delle bozze;</li>
-        <li>impaginazione;</li>
-        <li>realizzazione della copertina;</li>
-        <li>creazione o preparazione delle grafiche;</li>
-        <li>preparazione dei file destinati all’autopubblicazione.</li>
-      </ul>
+        <p>
+          In base alle caratteristiche del libro e agli interventi
+          concordati, la lavorazione può comprendere:
+        </p>
 
-      <p>
-        Gli interventi svolti su ogni singola opera possono essere
-        specificati nella pagina dei crediti presente all’interno del libro.
-      </p>
-    </section>
+        <ul>
+          <li>lettura e valutazione del manoscritto;</li>
+          <li>editing e revisione del testo;</li>
+          <li>correzione delle bozze;</li>
+          <li>impaginazione;</li>
+          <li>realizzazione della copertina;</li>
+          <li>creazione o preparazione delle grafiche;</li>
+          <li>
+            preparazione dei file destinati all’autopubblicazione.
+          </li>
+        </ul>
 
-    <section>
-      <h2>Ruolo dell’autore</h2>
+        <p>
+          Gli interventi effettivamente svolti vengono indicati
+          nella pagina dei crediti o nel colophon della singola opera.
+        </p>
+      </section>
 
-      <p>
-        L’autore rimane titolare della propria opera e conserva i relativi
-        diritti. Approva il testo, la copertina, l’impaginazione e tutti
-        i materiali prima della consegna definitiva.
-      </p>
+      <section class="legal-section">
+        <h2>Ruolo dell’autore</h2>
 
-      <p>
-        Una volta conclusa la curatela, i file vengono consegnati all’autore,
-        che sceglie autonomamente se, quando e attraverso quale piattaforma
-        pubblicare il libro.
-      </p>
+        <p>
+          L’autore rimane titolare della propria opera e conserva
+          i relativi diritti.
+        </p>
 
-      <p>
-        Ogni autore utilizza il proprio account e gestisce direttamente
-        il rapporto con la piattaforma scelta, l’eventuale codice ISBN,
-        il prezzo di vendita, la distribuzione, i compensi e gli adempimenti
-        connessi alla pubblicazione.
-      </p>
-    </section>
+        <p>
+          Il testo, la copertina, l’impaginazione e gli altri materiali
+          vengono sottoposti alla sua approvazione prima della consegna
+          definitiva.
+        </p>
 
-    <section>
-      <h2>Collaborazioni esterne</h2>
+        <p>
+          Una volta conclusa la curatela, i file vengono consegnati
+          all’autore, che decide autonomamente se, quando e attraverso
+          quale piattaforma pubblicare l’opera.
+        </p>
 
-      <p>
-        Il progetto può scegliere di collaborare gratuitamente con un numero
-        molto limitato di amici, conoscenti o autori vicini alla propria
-        sensibilità.
-      </p>
+        <p>
+          Ogni autore utilizza il proprio account e gestisce direttamente
+          il rapporto con la piattaforma scelta, l’eventuale codice ISBN,
+          il prezzo di vendita, la distribuzione e i compensi derivanti
+          dall’opera.
+        </p>
+      </section>
 
-      <p>
-        Le opere vengono considerate individualmente e devono essere ritenute
-        affini alle corde di Cripta Dark Press e adatte a essere valorizzate
-        attraverso il suo intervento.
-      </p>
+      <section class="legal-section">
+        <h2>Collaborazioni esterne</h2>
 
-      <p>
-        Cripta Dark Press non effettua scouting aperto, non indice selezioni
-        e non riceve manoscritti inviati spontaneamente.
-      </p>
-    </section>
+        <p>
+          Cripta Dark Press nasce per curare le opere dei suoi fondatori.
+        </p>
 
-    <section>
-      <h2>Gratuità della curatela</h2>
+        <p>
+          Il progetto può scegliere, occasionalmente, di mettere
+          gratuitamente le proprie competenze a disposizione di un numero
+          molto limitato di amici, conoscenti o autori vicini alla propria
+          sensibilità.
+        </p>
 
-      <p>
-        Le collaborazioni svolte sotto il sigillo Cripta Dark Press
-        sono gratuite.
-      </p>
+        <p>
+          Ogni testo viene considerato singolarmente e deve essere ritenuto
+          affine alle corde di Cripta Dark Press e adatto a essere valorizzato
+          attraverso il suo intervento.
+        </p>
 
-      <p>
-        Cripta Dark Press non richiede pagamenti, non trattiene percentuali
-        sulle vendite, non percepisce royalties e non acquisisce i diritti
-        sulle opere curate.
-      </p>
-    </section>
+        <p>
+          Cripta Dark Press non effettua scouting aperto, non indice
+          selezioni e non riceve manoscritti inviati spontaneamente.
+        </p>
+      </section>
 
-    <section>
-      <h2>Autonomia della pubblicazione</h2>
+      <section class="legal-section">
+        <h2>Gratuità della curatela</h2>
 
-      <p>
-        Cripta Dark Press non pubblica libri per conto degli autori
-        e non conclude contratti con piattaforme di autopubblicazione
-        al loro posto.
-      </p>
+        <p>
+          Le collaborazioni svolte sotto il sigillo Cripta Dark Press
+          sono gratuite.
+        </p>
 
-      <p>
-        L’eventuale presenza del sigillo non identifica Cripta Dark Press
-        come editore, distributore o titolare del codice ISBN dell’opera.
-      </p>
+        <p>
+          Cripta Dark Press non richiede pagamenti, non trattiene
+          percentuali sulle vendite, non percepisce royalties e non
+          acquisisce i diritti sulle opere curate.
+        </p>
+      </section>
 
-      <p>
-        I nomi delle piattaforme eventualmente citate appartengono
-        ai rispettivi titolari. Cripta Dark Press non è collegata,
-        rappresentata o sponsorizzata da tali piattaforme.
-      </p>
-    </section>
+      <section class="legal-section">
+        <h2>Autonomia della pubblicazione</h2>
 
-    <section>
-      <h2>Utilizzo del logo</h2>
+        <p>
+          Cripta Dark Press non pubblica libri per conto degli autori
+          e non conclude contratti con piattaforme di autopubblicazione
+          al loro posto.
+        </p>
 
-      <p>
-        Il nome e il logo Cripta Dark Press possono essere utilizzati
-        su un libro esclusivamente dopo l’autorizzazione del progetto
-        e soltanto per l’opera o l’edizione sottoposta alla curatela.
-      </p>
+        <p>
+          La presenza del sigillo non identifica Cripta Dark Press
+          come editore, distributore, venditore o titolare del codice
+          ISBN dell’opera.
+        </p>
 
-      <p>
-        In caso di modifiche sostanziali successive alla consegna,
-        Cripta Dark Press può richiedere un nuovo controllo prima
-        di autorizzare nuovamente l’utilizzo del sigillo.
-      </p>
-    </section>
+        <p>
+          Le piattaforme utilizzate dagli autori vengono scelte
+          e gestite autonomamente dagli autori stessi.
+        </p>
 
-    <section>
-      <h2>Limiti del sigillo</h2>
+        <p>
+          I nomi e i marchi delle piattaforme eventualmente citate
+          appartengono ai rispettivi titolari. Cripta Dark Press
+          non è collegata, rappresentata o sponsorizzata da tali soggetti.
+        </p>
+      </section>
 
-      <p>
-        Il sigillo indica che l’opera ha ricevuto la curatela descritta
-        in questa pagina. Non costituisce una certificazione ufficiale
-        e non garantisce risultati commerciali, recensioni favorevoli
-        o uno specifico riscontro da parte del pubblico.
-      </p>
+      <section class="legal-section">
+        <h2>Utilizzo del logo</h2>
 
-      <p>
-        L’autore rimane responsabile dei contenuti dell’opera,
-        delle dichiarazioni contenute nel testo e dei materiali
-        da lui forniti.
-      </p>
-    </section>
+        <p>
+          Il nome e il logo Cripta Dark Press possono essere utilizzati
+          su un libro esclusivamente dopo l’autorizzazione del progetto
+          e soltanto per l’opera o l’edizione sottoposta alla sua curatela.
+        </p>
 
-    <section>
-      <h2>Proprietà dei contenuti</h2>
+        <p>
+          Il sigillo non può essere applicato autonomamente ad altre opere,
+          edizioni, ristampe o versioni modificate.
+        </p>
 
-      <p>
-        Il nome Cripta Dark Press, il logo, i testi, le grafiche
-        e gli altri contenuti originali presenti su questo sito
-        non possono essere copiati, modificati o riutilizzati
-        senza autorizzazione.
-      </p>
+        <p>
+          In caso di modifiche sostanziali successive alla consegna,
+          Cripta Dark Press può richiedere un nuovo controllo prima
+          di autorizzare nuovamente l’utilizzo del sigillo.
+        </p>
+      </section>
 
-      <p>
-        I diritti sulle singole opere curate rimangono dei rispettivi
-        autori, salvo eventuali accordi differenti espressamente
-        stabiliti per iscritto.
-      </p>
-    </section>
+      <section class="legal-section">
+        <h2>Limiti del sigillo</h2>
 
-    <div class="notice">
-      Le presenti note descrivono il funzionamento attuale di Cripta Dark Press
-      e potranno essere aggiornate in caso di modifica del progetto,
-      delle sue attività o delle modalità di collaborazione.
+        <p>
+          Il sigillo indica che l’opera ha ricevuto gli interventi
+          di curatela specificati nel volume.
+        </p>
+
+        <p>
+          Non costituisce una certificazione ufficiale e non garantisce
+          risultati commerciali, recensioni favorevoli, assenza assoluta
+          di errori o uno specifico riscontro da parte del pubblico.
+        </p>
+
+        <p>
+          L’autore rimane responsabile dei contenuti dell’opera,
+          delle dichiarazioni presenti nel testo e dei materiali
+          da lui forniti.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Opere mostrate sul sito</h2>
+
+        <p>
+          Il sito può mostrare le copertine e le informazioni essenziali
+          delle opere che hanno ricevuto il sigillo di curatela
+          Cripta Dark Press.
+        </p>
+
+        <p>
+          Tali contenuti vengono presentati con finalità informative,
+          documentative e di archivio, con l’autorizzazione dei rispettivi
+          aventi diritto.
+        </p>
+
+        <p>
+          La presenza di un’opera sul sito non indica che Cripta Dark Press
+          ne sia l’editore, il distributore o il venditore.
+        </p>
+
+        <p>
+          Cripta Dark Press non vende i libri mostrati sul sito
+          e non gestisce collegamenti commerciali o transazioni
+          relative al loro acquisto.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Proprietà dei contenuti</h2>
+
+        <p>
+          Il nome Cripta Dark Press, il logo, i testi, le grafiche
+          e gli altri contenuti originali presenti su questo sito
+          non possono essere copiati, modificati, distribuiti
+          o riutilizzati senza autorizzazione.
+        </p>
+
+        <p>
+          I diritti sulle singole opere curate rimangono dei rispettivi
+          autori, salvo eventuali accordi differenti stabiliti
+          espressamente per iscritto.
+        </p>
+
+        <p>
+          Le copertine e le informazioni relative ai libri restano
+          soggette ai diritti dei rispettivi autori, illustratori,
+          fotografi o altri aventi diritto.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Link esterni</h2>
+
+        <p>
+          Il sito può contenere collegamenti verso pagine o servizi
+          gestiti da soggetti terzi.
+        </p>
+
+        <p>
+          Cripta Dark Press non controlla tali siti e non risponde
+          dei loro contenuti, della loro disponibilità o delle rispettive
+          modalità di trattamento dei dati.
+        </p>
+      </section>
+    </div>
+
+    <div class="final-notice">
+      Le presenti note descrivono il funzionamento attuale
+      di Cripta Dark Press e potranno essere aggiornate in caso
+      di modifica del progetto, delle sue attività o delle modalità
+      di collaborazione.
     </div>
   </main>
 
-  <footer class="page-footer">
-    <div>
-      &copy; 2026 Cripta Dark Press
-    </div>
+  <footer class="site-footer">
+    <img
+      class="footer-logo"
+      src="images/logo-cripta-dark-press.png"
+      alt="Logo di Cripta Dark Press"
+      width="1024"
+      height="1024"
+    >
 
-    <div>
-      <a href="index.html">Home</a>
-    </div>
+    <p class="footer-brand">Cripta Dark Press</p>
+    <p class="footer-tagline">Sigillo di curatela</p>
 
-    <div>
-      Ultimo aggiornamento: 4 agosto 2026
+    <p class="footer-description">
+      Progetto privato e amatoriale dedicato alla curatela
+      di opere selezionate.
+    </p>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <nav
+      class="footer-navigation"
+      aria-label="Navigazione a piè di pagina"
+    >
+      <a class="footer-link" href="index.html">Home</a>
+    </nav>
+
+    <div class="copyright">
+      <div>&copy; 2026 Cripta Dark Press</div>
+      <div>Ultimo aggiornamento: 4 agosto 2026</div>
     </div>
   </footer>
 </body>
