@@ -254,6 +254,12 @@
       text-underline-offset: 4px;
     }
 
+    .footer-link[aria-current="page"] {
+      color: var(--muted);
+      cursor: default;
+      text-decoration: none;
+    }
+
     .copyright {
       margin-top: 24px;
       color: var(--muted);
@@ -612,7 +618,17 @@
       class="footer-navigation"
       aria-label="Navigazione a piè di pagina"
     >
-      <a class="footer-link" href="index.html">Home</a>
+      <a class="footer-link" href="index.html">
+        Home
+      </a>
+
+      <span class="footer-link" aria-current="page">
+        Note legali
+      </span>
+
+      <a class="footer-link" href="privacy.html">
+        Privacy e cookie
+      </a>
     </nav>
 
     <div class="copyright">
