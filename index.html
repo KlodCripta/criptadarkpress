@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cripta Dark Press — Sito in preparazione</title>
+  <title>Cripta Dark Press — Sigillo di curatela</title>
 
   <meta
     name="description"
-    content="Cripta Dark Press è un sigillo di curatela dedicato a opere autopubblicate. Il sito ufficiale è attualmente in preparazione."
+    content="Il sigillo Cripta Dark Press identifica libri sottoposti a un lavoro di curatela, revisione, editing e, quando previsto, progettazione grafica."
   >
 
-  <!-- Da rimuovere quando verrà pubblicato il sito definitivo -->
+  <!-- Da rimuovere quando il sito dovrà essere indicizzato -->
   <meta name="robots" content="noindex, nofollow">
 
   <meta name="theme-color" content="#000000">
@@ -51,7 +51,7 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    .coming-soon {
+    .home {
       min-height: 100vh;
       min-height: 100svh;
       display: flex;
@@ -71,21 +71,12 @@
     }
 
     .eyebrow {
-      margin: 0 0 12px;
+      margin: 0;
       color: var(--soft-white);
       font-size: clamp(0.75rem, 2vw, 0.9rem);
       font-weight: 700;
       letter-spacing: 0.24em;
       line-height: 1.5;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(1.9rem, 6vw, 3.5rem);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      line-height: 1.1;
       text-transform: uppercase;
     }
 
@@ -107,19 +98,6 @@
 
     .message + .message {
       margin-top: 18px;
-    }
-
-    .status {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 10px 18px;
-      border: 1px solid var(--line);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
     }
 
     footer {
@@ -144,13 +122,8 @@
       text-underline-offset: 4px;
     }
 
-    .footer-separator {
-      margin: 0 8px;
-      color: var(--line);
-    }
-
     @media (max-width: 520px) {
-      .coming-soon {
+      .home {
         padding-inline: 18px;
       }
 
@@ -163,7 +136,7 @@
 </head>
 
 <body>
-  <main class="coming-soon">
+  <main class="home">
     <img
       class="logo"
       src="images/logo-cripta-dark-press.png"
@@ -174,21 +147,30 @@
 
     <p class="eyebrow">Sigillo di curatela</p>
 
-    <h1>Il sito è in preparazione</h1>
-
     <div class="separator" aria-hidden="true"></div>
 
     <p class="message">
-    Cripta Dark Press è un sigillo di curatela.
+      La presenza del sigillo indica che il libro che hai tra le mani
+      è stato curato da Cripta Dark Press.
     </p>
 
     <p class="message">
-    La sua presenza indica che il testo è stato letto, corretto e sottoposto a editing per eliminare gli errori, migliorarne la scorrevolezza e accompagnarlo verso la sua forma definitiva.
-    Impaginazione, copertina e grafiche sono state progettate con la stessa attenzione, seguendo la concezione visiva e le atmosfere cupe che identificano Cripta Dark Press.
-    Se trovi questo emblema in quarta di copertina, significa che ogni elemento del libro è passato attraverso la nostra cura.
+      Il testo è stato letto con attenzione e sottoposto a revisione
+      ed editing per correggere gli errori, migliorarne la scorrevolezza
+      e accompagnarlo verso la sua versione definitiva.
     </p>
 
-    <p class="status">Prossimamente online</p>
+    <p class="message">
+      Quando previsto, anche l’impaginazione, la copertina e le grafiche
+      fanno parte della curatela, seguendo la concezione visiva
+      e le atmosfere cupe che identificano Cripta Dark Press.
+    </p>
+
+    <p class="message">
+      All’interno del volume è presente una pagina dedicata a Cripta Dark Press,
+      che conferma l’autenticità del sigillo. Nel colophon sono invece indicati,
+      con precisione, gli interventi svolti su quella specifica opera.
+    </p>
 
     <footer>
       <div>
