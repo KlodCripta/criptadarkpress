@@ -107,7 +107,11 @@
       color: var(--soft-white);
       font-size: clamp(1rem, 2.1vw, 1.08rem);
       line-height: 1.78;
-      text-align: left;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
     }
 
     .details p {
@@ -182,6 +186,9 @@
 
       .details {
         line-height: 1.72;
+        text-align: left;
+        hyphens: none;
+        -webkit-hyphens: none;
       }
     }
   </style>
@@ -218,9 +225,9 @@
         <p class="opening">
           Se avete tra le mani un libro con questo sigillo in quarta
           di copertina, significa che ha ricevuto la curatela
-          di Cripta Dark Press. Il testo è stato letto con attenzione e 
-          sottoposto a revisione ed editing per correggere gli errori, 
-          migliorarne la scorrevolezza e accompagnarlo verso la sua 
+          di Cripta Dark Press. Il testo è stato letto con attenzione
+          e sottoposto a revisione ed editing per correggere gli errori,
+          migliorarne la scorrevolezza e accompagnarlo verso la sua
           versione definitiva.
         </p>
 
