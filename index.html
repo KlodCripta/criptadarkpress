@@ -11,15 +11,13 @@
     content="Cripta Dark Press è un progetto privato di curatela. Il sigillo identifica le opere selezionate e curate dal progetto."
   >
 
-  <!-- Da rimuovere quando il sito dovrà essere indicizzato -->
-  <meta name="robots" content="noindex, nofollow">
 
   <meta name="theme-color" content="#000000">
 
   <link
     rel="icon"
     type="image/png"
-    href="images/logo-cripta-dark-press.png"
+    href="favicon-32.png"
   >
 
   <style>
@@ -207,6 +205,18 @@
       line-height: 1.8;
     }
 
+  .copyright a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .copyright a:hover,
+  .copyright a:focus-visible {
+    color: var(--soft-white);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -262,7 +272,8 @@
 
     <img
       class="logo"
-      src="images/logo-cripta-dark-press.png"
+      src="images/logo-cripta-dark-press.webp"
+      fetchpriority="high"
       alt="Logo di Cripta Dark Press"
       width="1024"
       height="1024"
@@ -308,7 +319,7 @@
   <footer class="site-footer">
     <img
       class="footer-logo"
-      src="images/logo-cripta-dark-press.png"
+      src="images/logo-cripta-dark-press.webp"
       alt=""
       width="1024"
       height="1024"
@@ -339,6 +350,7 @@
 
     <div class="copyright">
       <div>&copy; 2026 Cripta Dark Press</div>
+      <div>Sito web realizzato da <a href="https://klodex.it/">KLODEX.it</a> su sistema Arch Linux.</div>
     </div>
   </footer>
 </body>
